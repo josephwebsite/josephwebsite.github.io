@@ -44,25 +44,26 @@ h1 {
 <br>
 <br>
 <label class="css">how old are you?
-<input id="age">
+<input id="age" type="text">
 </label>
 <br>
 <br>
 <label class="css">where do you live?
 <br>
 <br>
-state:<input id="state">
-city:<input id= "city">
+state:<input id="state" type="text">
+city:<input id= "city" type="text">
 </label>
 <br>
 <br>
 <button id="button" type="button">your info</button>
         
-<div id="message"></div>    
+   
   
 </h3>
 </p>
 </div>
+<span id="message"> </span>
 <script>
 
 
@@ -75,17 +76,11 @@ var age = document.getElementById("age").value;
 var state = document.getElementById("state").value;
 var city = document.getElementById("city").value;
       
-var greeting = "hi " + name + ", you are " + age + " years old. you live in " + city + ", " + state
-document.getElementById("message").textContent += greeting;  
-  
+var greeting = document.getElementById("message");
+greeting.innerHTML = "hi " + name + ", you are " + age + " years old. you live in " + city + ", " + state;
 };
 
-if(city = "") {
-
-}
-else{
 button.addEventListener("click", onButtonClick);
-}
 </script>
 
     
