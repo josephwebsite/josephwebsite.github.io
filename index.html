@@ -7,20 +7,35 @@
 <title>my survey</title>
 <style>
 .css {
-	postition:absolute;
+	font-size:40px;
 }
 body {
 	background-color:rgb(52, 196, 203);
+}
+h1 {
+	font-size:50px;
+}
+#button {
+	font-size:40px;
+	
 }
 </style>
 </head>
     
 <body>
 
-<h1>my survey!</h1>    
+<div align="center">
+<h1>my survey!</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>   
 <div>
 <h3>
-        
+
+<p>        
 <label class="css">What's your name?
         
 <input id="name" type="text">
@@ -46,6 +61,8 @@ city:<input id= "city">
 <div id="message"></div>    
   
 </h3>
+</p>
+</div>
 <script>
 
 
@@ -63,8 +80,12 @@ document.getElementById("message").textContent += greeting;
   
 };
 
+if(city = "") {
 
+}
+else{
 button.addEventListener("click", onButtonClick);
+}
 </script>
 
     
