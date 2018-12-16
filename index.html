@@ -1,29 +1,96 @@
 <!DOCTYPE html>
+
 <html>
+    
 <head>
-	<title>choose dogs over cats</title
+
+<title>my survey</title>
+<style>
+
+body {
+	background-color:rgb(52, 196, 203);
+}
+.css {
+	font-size:40px;
 	
+}
+h1 {
+	font-size:50px;
+}
+button {
+	font-size:40px;
+	background-color:rgb(51, 153, 255);
+	border-style:none;
+	color:white;
+	border-radius:15px;
+	
+}
+#message {
+	font-size:40px;
+}
+#before {
+	color:rgb(52, 196, 203);
+}
+#m {
+	font-size:40px;
+}
+</style>
 </head>
-<body bgcolor="800000">
-<h1>why should you choose dogs over cats?</h1>
-<h2>
-<ol>
-	<li>they are smarter</li>
-	<li>they are more loving</li>
-	<li>they like playing</li>
-	<li>they feel guilt if they did something bad</li>
-	<li>they can be trained</li>
-	</ol>
-	</h2> 
-<h3 align="right" style="width:90%;">this is a picture of a border collie</h3>
-	<img src="collie.jpg" style="width:50%;"align="right"/>
-	<h3 align="right" style="width:35%;">this is a picture of a siberian husky</h3>
-	<img src="husky.jpg" style="width:50%;"align="right"/>
-	<h1><a href="https://www.google.com/search?q=dogs&ie=utf-8&oe=utf-8&client=firefox-b-1-ab" >to find out more on dogs click this</a></h1>
-	<img src="labrodor.jpg" style="width:50%;" align="right"/>
-	<p>dogs are such adorable angels they obey you<br>
-	and love you and do tricks for you. if you arent  <br>
-	allergic to them i suggest you get one.<p>
-	<h3>this is a picture of a labrador retriver</h3>
+    
+<body>
+
+<div align="center">
+<h1>mad libs</h1>
+<br>
+<br>  
+<div>
+<h3>
+
+<p>        
+<label class="css">type a
+<br>
+<br>
+<h2><ul>
+<li>singular noun:<input id="state" type="text"></li>
+<br>
+<li>adjective:    <input id= "city" type="text"></li>
+<br>
+<li>verb:         <input id= "verb" type="text"></li>
+</ul></h2>
+</label>
+<br>
+<br>
+<button id="button" type="button">your info</button>
+        
+</h3>
+</p>
+</div>
+<span id="num"> </span>
+<span id="m"> </span>
+<br>
+<br>
+<br>
+<div id="message"> </div>
+<script>
+
+var button = document.getElementById("button");
+
+var onButtonClick = function() {
+
+var state = document.getElementById("state").value;
+var city = document.getElementById("city").value;
+
+var verb = document.getElementById("verb").value;
+
+var s = document.getElementById("m");
+s.innerHTML = "original paragraph: cars are like people. because sometimes they work but sometimes they're kind of lazy. but to repair a broken car you must find a repairman to fix it"
+var greeting = document.getElementById("message");
+greeting.innerHTML = "modified paragraph: cars are like " + state + "s. because sometimes they work but sometimes they're kind of " + city + ". but to " + verb + " a " + city + " car you must find a repairman to " + verb + " it"
+}
+button.addEventListener("click", onButtonClick);
+</script>
+
+
 </body>
+
 </html>
