@@ -53,6 +53,10 @@ button {
 <h2><ul>
 <li>singular noun:<input id="state" type="text"></li>
 <br>
+<li>singular animal:<input id="an" type="text"></li>
+<br>
+<li>plural noun:  <input id="noun" type="text"></li>
+<br>
 <li>adjective:    <input id= "city" type="text"></li>
 <br>
 <li>verb:         <input id= "verb" type="text"></li>
@@ -65,8 +69,7 @@ button {
 </h3>
 </p>
 </div>
-<span id="num"> </span>
-<span id="m"> </span>
+<div id="m"> </div>
 <br>
 <br>
 <br>
@@ -77,15 +80,26 @@ var button = document.getElementById("button");
 
 var onButtonClick = function() {
 
-var state = document.getElementById("state").value;
-var city = document.getElementById("city").value;
+var num = document.getElementById("num")
+var x = Math.floor((Math.random() * 2) + 1);
+var noun = document.getElementById("state").value;
+var adj = document.getElementById("city").value;
 
 var verb = document.getElementById("verb").value;
 
+var noun2 = document.getElementById("noun").value;
+var an = document.getElementById("an").value;
 var s = document.getElementById("m");
-s.innerHTML = "original paragraph: cars are like people. because sometimes they work but sometimes they're kind of lazy. but to repair a broken car you must find a repairman to fix it"
 var greeting = document.getElementById("message");
-greeting.innerHTML = "modified paragraph: cars are like " + state + "s. because sometimes they work but sometimes they're kind of " + city + ". but to " + verb + " a " + city + " car you must find a repairman to " + verb + " it"
+if(x === 1) {
+	s.innerHTML = "original paragraph:    cars are like people. because sometimes they work but sometimes they're kind of lazy. but to repair a broken car you must find a repairman to fix it"
+	greeting.innerHTML = "modified paragraph:    cars are like " + noun + "s. because sometimes they work but sometimes they're kind of " + adj + ". but to " + verb + " a " + adj + " car you must find a repairman to " + verb + " it"
+}
+
+if (x === 2) {
+	s.innerHTML = "orginal paragraph:    ahh. dogs are such cute things. because they will love you without stop unlike cats. infact dogs were the first domesticated animal. and can help with your busy life. so buy a dog today!"
+	greeting.innerHTML = "modified paragraph:    ahh. " + an + "s are such cute things. because they will " + verb + " you without stop unlike " + noun2 + ". infact " + an + "s were the first " + adj + " animal. and can help you out with your " + adj + " life. so " + verb + " a/an " + an + " today!"
+}
 }
 button.addEventListener("click", onButtonClick);
 </script>
